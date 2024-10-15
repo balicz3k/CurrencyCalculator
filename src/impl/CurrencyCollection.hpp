@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+#pragma once
+
+>>>>>>> 0170123 (project scheme and first implementation required classes and interfaces)
 #include "src/intf/ICurrencyCollection.hpp"
 #include "src/intf/ICurrency.hpp"
 
