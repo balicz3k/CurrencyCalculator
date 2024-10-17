@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 #pragma once
 
->>>>>>> 0170123 (project scheme and first implementation required classes and interfaces)
 #include "src/intf/IDataProvider.hpp"
 #include <string>
 #include <sstream>

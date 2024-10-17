@@ -3,22 +3,14 @@
 #include <iostream>
 #include <sstream>
 
-<<<<<<< HEAD
-void DataParser::parseData(const std::string &data, ICurrencyCollection &collection) 
-=======
 void DataParser::parseData(const std::string &data, std::shared_ptr<ICurrencyCollection> collection) 
->>>>>>> 0170123 (project scheme and first implementation required classes and interfaces)
 {
     std::istringstream stream(data);
     std::string line;
     while (std::getline(stream, line)) {
         auto currency = stringToICurrency(line);
         if (currency) {
-<<<<<<< HEAD
-            collection.addCurrency(currency);
-=======
             collection->addCurrency(currency);
->>>>>>> 0170123 (project scheme and first implementation required classes and interfaces)
         }
     }
     addPLN(collection);
@@ -42,15 +34,8 @@ std::shared_ptr<ICurrency> DataParser::stringToICurrency(const std::string &line
     return std::make_shared<ICurrency>(name, code, rate);
 }
 
-<<<<<<< HEAD
-void DataParser::addPLN(ICurrencyCollection &collection) 
-{
-    auto pln = std::make_shared<ICurrency>("Polski Złoty", "PLN", 1.0);
-    collection.addCurrency(pln);
-=======
 void DataParser::addPLN(std::shared_ptr<ICurrencyCollection> collection) 
 {
     auto pln = std::make_shared<ICurrency>("Polski Złoty", "PLN", 1.0);
     collection->addCurrency(pln);
->>>>>>> 0170123 (project scheme and first implementation required classes and interfaces)
 }

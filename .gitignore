@@ -31,4 +31,8 @@
 *.out
 *.app
 
+# VSC files
 .vscode/settings.json
+
+# Build files
+build/
